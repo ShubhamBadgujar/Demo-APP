@@ -1,0 +1,10 @@
+version: 1.0
+service: my-function
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  my-function:
+    lang: java
+    runtime: java11  # Specify the Java runtime version (e.g., java11, java17)
+    handler: ./src/main/java/handler
